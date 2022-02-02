@@ -52,9 +52,7 @@ export let loader: LoaderFunction = async ({ request }) => {
   hash.update(height?.toString() || "0");
   hash.update(fit);
   let key = hash.digest("hex");
-  let cachedFile = path.resolve(
-    path.join(".vercel/cache/images", key + ".webp")
-  );
+  let cachedFile = path.resolve(path.join(".cache/images", key + ".webp"));
 
   try {
     let exists = await fsp
@@ -69,7 +67,7 @@ export let loader: LoaderFunction = async ({ request }) => {
         status: 200,
         headers: {
           "Content-Type": "image/webp",
-          "Cache-Control": "public, max-age=31536000, immutable",
+          "Cache-Control": "public, max-age=36000, immutable",
         },
       }) as unknown as Response;
     } else {
@@ -134,7 +132,7 @@ export let loader: LoaderFunction = async ({ request }) => {
       status: status,
       headers: {
         "Content-Type": "image/webp",
-        "Cache-Control": "public, max-age=31536000, immutable",
+        "Cache-Control": "public, max-age=36000, immutable",
       },
     }) as unknown as Response;
   } catch (error) {
