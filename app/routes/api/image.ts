@@ -52,7 +52,9 @@ export let loader: LoaderFunction = async ({ request }) => {
   hash.update(height?.toString() || "0");
   hash.update(fit);
   let key = hash.digest("hex");
-  let cachedFile = path.resolve(path.join(".cache/images", key + ".webp"));
+  let cachedFile = path.resolve(
+    path.join(".vercel/cache/images", key + ".webp")
+  );
 
   try {
     let exists = await fsp
