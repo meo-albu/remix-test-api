@@ -1,7 +1,7 @@
 import type { ComponentPropsWithoutRef } from "react";
 
 export function Image({
-  optimizerUrl = "api/image",
+  optimizerUrl = "api",
   responsive,
   src,
   ...rest
