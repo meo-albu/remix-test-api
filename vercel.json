@@ -6,7 +6,7 @@
   },
   "headers": [
     {
-      "source": "images/image-server.ts",
+      "source": "/images/image-server.ts",
       "headers": [
         {
           "key": "Cache-Control",
