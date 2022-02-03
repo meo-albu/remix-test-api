@@ -67,7 +67,7 @@ export let loader: LoaderFunction = async ({ request }) => {
         status: 200,
         headers: {
           "Content-Type": "image/webp",
-          "Cache-Control": "max-age=0, s-maxage=86400",
+          "Cache-Control": "public, max-age=31536000, immutable",
         },
       }) as unknown as Response;
     } else {
@@ -132,7 +132,7 @@ export let loader: LoaderFunction = async ({ request }) => {
       status: status,
       headers: {
         "Content-Type": "image/webp",
-        "Cache-Control": "max-age=0, s-maxage=86400",
+        "Cache-Control": "public, max-age=31536000, immutable",
       },
     }) as unknown as Response;
   } catch (error) {
