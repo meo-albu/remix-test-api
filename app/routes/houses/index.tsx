@@ -72,7 +72,6 @@ export default function Houses() {
           <li key={house.property_id}>
             <Link to={`${house.property_id}`}>
               <h2>{house.title}</h2>
-              {/* <img src={house.image} width="800" /> */}
               <div className="image">
                 <Image
                   src={house.image}

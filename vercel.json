@@ -3,16 +3,5 @@
     "env": {
       "ENABLE_FILE_SYSTEM_API": "1"
     }
-  },
-  "headers": [
-    {
-      "source": "/images/image-server.ts",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=36000, immutable"
-        }
-      ]
-    }
-  ]
+  }
 }
